@@ -46,42 +46,39 @@ export default function LandingPage() {
   return (
     <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white font-sans min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden">
-        <motion.div style={{ opacity, scale }} className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-700 to-indigo-900 opacity-50"></div>
-          <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] bg-cover bg-center opacity-10"></div>
-        </motion.div>
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-purple-900 to-indigo-900">
+      <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] bg-repeat opacity-10"></div>
+      <div className="container mx-auto px-6 py-20 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+            Unlock Your Elite Potential
+          </h1>
+          <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+            Harness the power of daily coaching, personalized routines, and cutting-edge mental toughness strategies to outperform in every aspect of your life.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-8 px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-              Unlock Your Elite Potential
-            </h1>
-            <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-              Harness the power of daily coaching, personalized routines, and cutting-edge mental toughness strategies to outperform in every aspect of your life.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-8 px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Start Your Journey Now
-            </motion.button>
-          </motion.div>
-          <motion.img
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            src="/hero-ui.png"
-            alt="Elite Performer App Preview"
-            className="mx-auto mt-16 w-full max-w-4xl rounded-lg shadow-2xl"
-          />
-        </div>
-      </section>
+            Start Your Journey Now
+          </motion.button>
+        </motion.div>
+        <motion.img
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          src="/hero-ui.png"
+          alt="Elite Performer App Preview"
+          className="mx-auto mt-16 w-full max-w-4xl rounded-lg shadow-2xl"
+        />
+      </div>
+    </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gray-800">
